@@ -32,7 +32,6 @@ start.onclick = function (e) {
     // when game is paused
     clearInterval(intervalId)
     document.querySelectorAll(".bb").forEach(e => {
-      console.log(e)
       e.style.animationIterationCount = "inherit"
       e.style.opacity = 0
     })

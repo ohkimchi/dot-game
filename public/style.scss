@@ -23,6 +23,14 @@ button {
   height: 16vh;
 }
 
+.speedSlider {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3vh;
+  margin: 0 auto;
+  width: 95vw;
+}
+
 .slider {
   -webkit-appearance: none;
   appearance: none;
