@@ -1,17 +1,16 @@
 let slider = document.getElementById("ballSize")
-let size = document.getElementById("ballSizeVal")
-size.innerHTML = slider.value
+let score = document.getElementById("ballSizeVal")
+score.innerHTML = '0'
 
 let bubbleArea = document.querySelector(".bubble-area")
 let height = bubbleArea.clientHeight
-let time = height / size.innerHTML
+let time = height / slider.value
 let i = 0
 let j = 0
 let start = document.querySelector("#startButton")
 let intervalId
 
 slider.oninput = function () {
-  size.innerHTML = this.value
   time = height / this.value
 }
 
@@ -42,7 +41,7 @@ start.onclick = function (e) {
 
 function gameMode() {
   return setInterval(() => {
-    let horizontalPosition = getRandomVal(100, 10) + "vw"
+    let horizontalPosition = getRandomVal(90, 10) + "vw"
     let diameter = getRandomVal(100, 10)
     let i = document.querySelectorAll(".bb").length
 
@@ -57,14 +56,16 @@ function gameMode() {
       newBall.value = diameter
       bubbleArea.appendChild(newBall)
       newBall.onclick = function (e) {
-        let score = 100 - e.target.value
-        size.innerHTML = score + Number(size.innerHTML)
+        let scoreCurrent = Math.floor(-0.1 * (e.target.value) + 11)
+        score.innerHTML = scoreCurrent + Number(score.innerHTML)
         bubbleArea.removeChild(e.target)
       }
       i++
     }
     if (j < 60) {
-      document.querySelector(`#bb-${j}`).style.left = horizontalPosition
+      if (document.querySelector(`#bb-${j}`)) {
+        document.querySelector(`#bb-${j}`).style.left = horizontalPosition
+      }
     }
     j++
     if (j == 60) {

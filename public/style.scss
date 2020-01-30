@@ -15,8 +15,12 @@ button {
   width: 40vw;
 }
 
-.slider-container {
+.slide-container {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 16vh;
 }
 
 .slider {
@@ -29,6 +33,7 @@ button {
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  margin: 0 auto;
 }
 
 .slider:hover {
