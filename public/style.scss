@@ -48,28 +48,28 @@ button {
   height: 80vh;
   width: 100vw;
   bottom: 0;
-  background: yellow;
-  position: relative;
+  background: lightskyblue;
+  position: fixed;
   overflow: hidden;
 }
 
 .bb {
-  width: 50px;
-  height: 50px;
   border-radius: 100%;
   background: tomato;
   animation-name: falling;
-  animation-timing-function: linear;
   animation-iteration-count: infinite;
+  transition-timing-function: linear;
   position: absolute;
 }
 
 @keyframes falling {
   0% {
-    top: 0;
+    top: -50px;
   }
 
+  90%,
   100% {
-    top: 80vh;
+    opacity: 0;
+    top: 100vh;
   }
 }
