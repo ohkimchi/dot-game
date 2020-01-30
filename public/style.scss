@@ -35,7 +35,7 @@ button {
   -webkit-appearance: none;
   appearance: none;
   width: 90vw;
-  height: 5vw;
+  height: 5vh;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -51,8 +51,8 @@ button {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5vw;
-  height: 5vw;
+  width: 5vh;
+  height: 5vh;
   background: #4caf50;
   cursor: pointer;
 }
