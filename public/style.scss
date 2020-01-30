@@ -68,7 +68,8 @@ button {
 
 .bb {
   border-radius: 100%;
-  background: tomato;
+  border: 3px solid black;
+  // background: tomato;
   animation-name: falling;
   animation-iteration-count: infinite;
   transition-timing-function: linear;
