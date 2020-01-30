@@ -1,0 +1,80 @@
+body {
+  text-align: center;
+  margin: 3vh auto 0 auto;
+  font-size: 6vh;
+}
+
+.top-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  font-size: 5vh;
+  background: pink;
+  width: 40vw;
+}
+
+.slider-container {
+  width: 100vw;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 90vw;
+  height: 5vw;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5vw;
+  height: 5vw;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.bubble-area {
+  height: 80vh;
+  width: 100vw;
+  bottom: 0;
+  background: lightskyblue;
+  position: fixed;
+  overflow: hidden;
+}
+
+.bb {
+  border-radius: 100%;
+  background: tomato;
+  animation-name: falling;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+  position: absolute;
+}
+
+@keyframes falling {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  90%,
+  100% {
+    opacity: 0;
+    top: 100vh;
+  }
+}
